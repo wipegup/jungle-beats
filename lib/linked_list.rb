@@ -12,6 +12,24 @@ class LinkedList
     end_node.set_next = Node.new(data)
   end
 
+  def prepend(data)
+    @head = Node.new(data,@head)
+  end
+
+  def insert(position, data)
+    if position <0 || position >count
+      puts "Position out of range"
+    end
+
+    node = @head
+    while position >0
+      node = node.next_node
+      position -=1
+    end
+
+    node.set_next = Node.new(data,node.next_node)
+  end
+
   def count
     counter = 0
     end_node = @head
