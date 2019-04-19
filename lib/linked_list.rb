@@ -1,3 +1,4 @@
+require './lib/node'
 class LinkedList
 
   def initialize

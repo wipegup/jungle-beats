@@ -15,6 +15,9 @@ class LinkedListTest < MiniTest::Test
 
     assert_equal 3, @jb.count
     assert_equal "this", @jb.list.head.data
+
+    @jb.append("do too")
+    assert_equal 5, @jb.count
   end
 
 end
