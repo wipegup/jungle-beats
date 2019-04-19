@@ -30,4 +30,6 @@ class LinkedListTest < MiniTest::Test
 
     assert_equal "next", @list.to_string
   end
+
+
 end
