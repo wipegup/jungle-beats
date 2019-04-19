@@ -56,4 +56,31 @@ class LinkedListTest < MiniTest::Test
 
     assert_equal  "next it then", @list.to_string
   end
+
+  def test_it_can_find
+    @list.append("next")
+    @list.append("then")
+    @list.append("it")
+    @list.append("do")
+
+    expect_equal "it", @list.find(2,1)
+    expect_equal "it do", @list.find(2,2)
+  end
+
+  def test_it_has_include?
+    @list.append("next")
+    @list.append("then")
+
+    expect_equal true, @list.includes("then")
+    expect_equal false, @list.includes("that")
+
+  end
+
+  def test_it_can_pop
+    @list.append("next")
+    @list.append("then")
+
+    expect_equal "then", @list.pop
+    expect_equal "next", @list.to_string
+  end
 end
