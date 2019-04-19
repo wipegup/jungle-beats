@@ -72,8 +72,8 @@ class LinkedListTest < MiniTest::Test
     @list.append("next")
     @list.append("then")
 
-    assert_equal true, @list.includes("then")
-    assert_equal false, @list.includes("that")
+    assert_equal true, @list.includes?("then")
+    assert_equal false, @list.includes?("that")
 
   end
 
