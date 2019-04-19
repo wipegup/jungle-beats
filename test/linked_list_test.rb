@@ -31,5 +31,15 @@ class LinkedListTest < MiniTest::Test
     assert_equal "next", @list.to_string
   end
 
+  def test_it_can_add_multiple_nodes
+    @list.append("next")
+    @list.append("then")
+
+    assert_equal 2, @list.count
+    assert_equal "next then", @list.to_string
+    assert_equal "next", @list.head.data
+    assert_equal "then", @list.head.next_node.data
+    assert_nil @list.head.next_node.next_node
+  end
 
 end
