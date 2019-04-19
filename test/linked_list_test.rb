@@ -42,4 +42,18 @@ class LinkedListTest < MiniTest::Test
     assert_nil @list.head.next_node.next_node
   end
 
+  def test_it_can_prepend
+    @list.append("next")
+    @list.prepend("then")
+
+    assert_equal "then next", @list.to_string
+  end
+
+  def test_it_can_insert
+    @list.append("next")
+    @list.append("then")
+    @list.insert(1, "it")
+
+    assert_equal  "next it then", @list.to_string
+  end
 end
