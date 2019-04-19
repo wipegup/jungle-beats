@@ -1,3 +1,4 @@
+require './test/test_helper'
 require './lib/jungle_beat'
 
 class LinkedListTest < MiniTest::Test
@@ -11,6 +12,7 @@ class LinkedListTest < MiniTest::Test
   end
 
   def test_it_can_add_multiple_at_one_time
+    binding.pry
     @jb.append("this it that")
 
     assert_equal 3, @jb.count

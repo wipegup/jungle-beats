@@ -6,4 +6,7 @@ class JungleBeat
     @list = LinkedList.new
   end
 
+  def append(string)
+    
+  end
 end

@@ -5,6 +5,7 @@ class Node
     @next_node = next_node
   end
 
-  
-
+  def set_next(node)
+    @next_node = node
+  end
 end

@@ -1,3 +1,4 @@
+require './test/test_helper'
 require './lib/linked_list'
 
 class LinkedListTest < MiniTest::Test
