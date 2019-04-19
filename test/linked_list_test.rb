@@ -63,16 +63,16 @@ class LinkedListTest < MiniTest::Test
     @list.append("it")
     @list.append("do")
 
-    expect_equal "it", @list.find(2,1)
-    expect_equal "it do", @list.find(2,2)
+    assert_equal "it", @list.find(2,1)
+    assert_equal "it do", @list.find(2,2)
   end
 
   def test_it_has_include?
     @list.append("next")
     @list.append("then")
 
-    expect_equal true, @list.includes("then")
-    expect_equal false, @list.includes("that")
+    assert_equal true, @list.includes("then")
+    assert_equal false, @list.includes("that")
 
   end
 
@@ -80,7 +80,7 @@ class LinkedListTest < MiniTest::Test
     @list.append("next")
     @list.append("then")
 
-    expect_equal "then", @list.pop
-    expect_equal "next", @list.to_string
+    assert_equal "then", @list.pop
+    assert_equal "next", @list.to_string
   end
 end
